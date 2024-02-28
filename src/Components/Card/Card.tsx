@@ -1,29 +1,49 @@
 import styles from "./Card.module.scss";
-import { SlReload } from "react-icons/sl";
+import { faker } from "@faker-js/faker";
+import Timer from "../Timer/Timer";
+import GeneratedWords from "../GeneratedWords/GeneratedWords";
+import RestartButton from "../RestartButton/RestartButton";
+import Results from "../Results/Results";
+import { useState } from "react";
+
+const words = faker.word.words(30);
 
 export default function Card() {
+  const [timeLeft, setTimeLeft] = useState(60);
+
+  function handleTimeLeft() {
+    if (timeLeft > 0) {
+      setTimeLeft(timeLeft - 1);
+    }
+  }
+
+  setTimeout(handleTimeLeft, 1000);
+
+  function handleClick() {
+    console.log("Restart");
+  }
+
   return (
     <div className={styles["c-card"]}>
       <div className={styles["c-card__container"]}>
         <div className={styles["c-card__main"]}>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus in
-            autem, incidunt commodi magnam accusamus tempore expedita optio,
-            voluptates, eveniet nulla necessitatibus provident corrupti eum
-            pariatur nobis id possimus quod.
-          </p>
+          <GeneratedWords words={words} />
         </div>
         <div className={styles["c-card__footer"]}>
-          <span>Time left: 60s</span>
-          <span>75 WPM</span>
-          <span>Typed: 380 (380 | 0)</span>
-          <span>Correct words: 75</span>
-          <span>Wrong words: 0</span>
-          <span>Accuracy: 100%</span>
+          <Timer timeLeft={timeLeft} />
 
-          <button>
-            <SlReload />
-          </button>
+          {timeLeft === 0 && (
+            <Results
+              wpm={75}
+              correctTyped={380}
+              wrongTyped={0}
+              correctWords={75}
+              wrongWords={0}
+              accuracy={100}
+            />
+          )}
+
+          <RestartButton onRestart={handleClick} />
         </div>
       </div>
     </div>

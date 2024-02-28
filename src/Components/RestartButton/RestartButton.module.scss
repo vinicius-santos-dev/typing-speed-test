@@ -1,0 +1,22 @@
+.c-button {
+  margin-left: auto;
+  background: #1d8a99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    background: #0f5b6a;
+  }
+
+  svg {
+    height: 24px;
+    width: 24px;
+    fill: #fff;
+  }
+}

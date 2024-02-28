@@ -19,13 +19,6 @@
     border: 2px solid #e0e0e0;
   }
 
-  &__main {
-    p {
-      margin: 0;
-      font-size: 32px;
-    }
-  }
-
   &__footer {
     display: flex;
     justify-content: space-between;
@@ -33,42 +26,5 @@
     width: 100%;
     padding-top: 12px;
     border-top: 2px solid #e0e0e0;
-
-    span {
-      font-size: 18px;
-      border-right: 2px solid #e0e0e0;
-      padding-right: 8px;
-
-      &:not(:first-child) {
-        padding-left: 8px;
-      }
-
-      &:nth-child(6 ) {
-        border-right: none;
-      }
-    }
-
-    button {
-      margin-left: auto;
-      background: #1D8A99;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 40px;
-      width: 40px;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-
-      &:hover {
-        background: #0F5B6A;
-      }
-
-      svg {
-        height: 24px;
-        width: 24px;
-        fill: #fff;
-      }
-    }
   }
 }

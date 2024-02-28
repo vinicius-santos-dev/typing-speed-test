@@ -1,6 +1,6 @@
 html {
   height: 100dvh;
-  background-color: #1D8A99;
+  background-color: #1d8a99;
 }
 
 body {
@@ -17,7 +17,9 @@ main {
   align-items: center;
 }
 
-h1, span, p {
+h1,
+span,
+p {
   font-family: Ubuntu, Arial, sans-serif;
 }
 
@@ -25,4 +27,3 @@ h1 {
   font-size: 40px;
   margin: 0 0 24px;
 }
-
