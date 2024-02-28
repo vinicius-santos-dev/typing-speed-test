@@ -5,6 +5,7 @@ import GeneratedWords from "../GeneratedWords/GeneratedWords";
 import RestartButton from "../RestartButton/RestartButton";
 import Results from "../Results/Results";
 import { useState } from "react";
+import UserTypings from "../UserTypings/UserTypings";
 
 const words = faker.word.words(30);
 
@@ -28,6 +29,7 @@ export default function Card() {
       <div className={styles["c-card__container"]}>
         <div className={styles["c-card__main"]}>
           <GeneratedWords words={words} />
+          <UserTypings userInput={"words"} />
         </div>
         <div className={styles["c-card__footer"]}>
           <Timer timeLeft={timeLeft} />
