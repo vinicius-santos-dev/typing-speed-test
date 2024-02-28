@@ -1,0 +1,28 @@
+html {
+  height: 100dvh;
+  background-color: #1D8A99;
+}
+
+body {
+  height: 100dvh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1, span, p {
+  font-family: Ubuntu, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 40px;
+  margin: 0 0 24px;
+}
+
