@@ -21,6 +21,13 @@
 
   &__main {
     position: relative;
+
+    p {
+      margin: 0;
+      font-size: 32px;
+      word-spacing: 20px;
+      line-height: 50px;
+    }
   }
 
   &__footer {

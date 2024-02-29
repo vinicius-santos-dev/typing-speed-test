@@ -2,15 +2,17 @@ import styles from "./Results.module.scss";
 
 export default function Results({
   wpm,
-  correctTyped,
-  wrongTyped,
+  // correctTyped,
+  // wrongTyped,
+  totalTyped,
   correctWords,
   wrongWords,
   accuracy,
 }: {
   wpm: number;
-  correctTyped: number;
-  wrongTyped: number;
+  // correctTyped: number;
+  // wrongTyped: number;
+  totalTyped: number;
   correctWords: number;
   wrongWords: number;
   accuracy: number;
@@ -19,9 +21,10 @@ export default function Results({
     <div className={styles["c-results"]}>
       <p className={styles["success"]}>{wpm} WPM</p>
       <p>
-        Typed: {correctTyped + wrongTyped} (
-        <span className={styles["success"]}>{correctTyped}</span> |
-        <span className={styles["fail"]}> {wrongTyped}</span>)
+        Typed: {totalTyped}
+        {/* {correctTyped + wrongTyped} ( */}
+        {/* <span className={styles["success"]}>{correctTyped}</span> |
+        <span className={styles["fail"]}> {wrongTyped}</span>) */}
       </p>
       <p>
         Correct words: <span className={styles["success"]}>{correctWords}</span>

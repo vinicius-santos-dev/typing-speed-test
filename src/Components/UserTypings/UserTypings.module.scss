@@ -1,14 +1,24 @@
 .c-user-typings {
   position: absolute;
   top: 0;
-  display: flex;
-  align-items: center;
+  // display: ruby;
 
   span {
     margin: 0;
     font-size: 32px;
     word-spacing: 20px;
     line-height: 50px;
-    color: #1d8a99;
   }
+}
+
+.success {
+  color: #1d8a99;
+}
+
+.error {
+  color: #ff0000;
+}
+
+.whitespace {
+  background: #d8000042;
 }
