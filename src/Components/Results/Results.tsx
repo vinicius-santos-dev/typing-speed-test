@@ -1,3 +1,4 @@
+import { State } from "../../Hooks/UseEngine";
 import styles from "./Results.module.scss";
 
 export default function Results({
@@ -8,6 +9,7 @@ export default function Results({
   correctWords,
   wrongWords,
   accuracy,
+  state
 }: {
   wpm: number;
   // correctTyped: number;
@@ -16,7 +18,13 @@ export default function Results({
   correctWords: number;
   wrongWords: number;
   accuracy: number;
+  state: State
 }) {
+
+  if (state !== "finish") {
+    return null;
+  }
+
   return (
     <div className={styles["c-results"]}>
       <p className={styles["success"]}>{wpm} WPM</p>
