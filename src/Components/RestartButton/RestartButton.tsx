@@ -5,7 +5,7 @@ import { SlReload } from "react-icons/sl";
 export default function RestartButton({
   onRestart: handleRestart,
 }: {
-  onRestart: () => void;
+  onRestart: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }) {
   return (
     <button className={styles["c-button"]} onClick={handleRestart}>

@@ -19,7 +19,11 @@ export default function Card() {
     restart,
   } = useEngine();
 
-  function handleClick() {
+  function handleClick(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+    e.preventDefault();
+    console.log("event", e);
+    
+    e.currentTarget.blur();
     restart();
   }
 
