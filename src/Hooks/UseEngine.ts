@@ -11,7 +11,9 @@ import {
 
 export type State = "start" | "run" | "finish";
 
-const numberOfWords = 30;
+
+const numberOfWords = window.innerWidth < 768 ? 12 : 30;
+
 const timeLimit = 60;
 
 const useEngine = () => {

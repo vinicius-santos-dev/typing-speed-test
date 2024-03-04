@@ -9,6 +9,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    align-items: flex-start;
+  }
 }
 
 main {
@@ -26,4 +30,9 @@ p {
 h1 {
   font-size: 40px;
   margin: 0 0 24px;
+
+  @media (max-width: 768px) {
+    margin-top: 12px;
+    font-size: 32px;
+  }
 }

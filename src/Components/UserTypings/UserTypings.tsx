@@ -36,8 +36,9 @@ function Character({ actual, expected }: { actual: string; expected: string }) {
           ? styles["success"]
           : !isCorrect && !isWhiteSpace
           ? styles["error"]
-          : !isCorrect && isWhiteSpace ?
-          styles["whitespace"] : ""
+          : !isCorrect && isWhiteSpace
+          ? styles["whitespace"]
+          : ""
       }
     >
       {expected}

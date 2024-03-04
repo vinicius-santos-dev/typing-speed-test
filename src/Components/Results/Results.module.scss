@@ -1,19 +1,43 @@
 .c-results {
   display: flex;
 
+  @media(max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+  }
+
   p {
     font-size: 18px;
     border-right: 2px solid #e0e0e0;
     padding-right: 6px;
     padding-left: 6px;
     margin: 0;
+
+    @media(max-width: 768px) {
+      border-right: none;
+      border-bottom: 2px solid #e0e0e0;
+      padding-right: 0;
+      padding-left: 0;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      text-align: center;
+    }
     
     &:first-child {
       border-left: 2px solid #e0e0e0;
+
+      @media(max-width: 768px) {
+        border-left: none;
+        border-top: 2px solid #e0e0e0;
+      }
     }
 
     &:last-child {
       border-right: none;
+
+      @media(max-width: 768px) {
+        border-bottom: none;
+      }
     }
   }
 }

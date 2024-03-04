@@ -1,4 +1,9 @@
 .c-timer {
   font-size: 18px;
-  padding-right: 8px;
+  padding-right: 6px;
+
+  @media (max-width: 768px) {
+    padding-right: 0;
+    padding-bottom: 6px;
+  }
 }
