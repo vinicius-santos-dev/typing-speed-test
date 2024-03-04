@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 const useTimer = (seconds: number) => {
   const [timeLeft, setTimeLeft] = useState<number>(seconds);
+  //@ts-expect-error - ignore the error for now
   const intervalRef = useRef<NodeJS.Timer | null>(null);
 
   const startCountdown = useCallback(() => {
