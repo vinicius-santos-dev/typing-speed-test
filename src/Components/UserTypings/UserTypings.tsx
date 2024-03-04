@@ -1,4 +1,3 @@
-import Cursor from "../Cursor/Cursor";
 import styles from "./UserTypings.module.scss";
 
 export default function UserTypings({
@@ -21,7 +20,7 @@ export default function UserTypings({
           ></Character>
         );
       })}
-      <Cursor />
+      {/* <Cursor /> */}
     </div>
   );
 }

@@ -15,14 +15,14 @@ export default function Card() {
     typed,
     correctWords,
     wrongWords,
+    correctChars,
+    wrongChars,
     totalTyped,
     restart,
   } = useEngine();
 
   function handleClick(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
     e.preventDefault();
-    console.log("event", e);
-    
     e.currentTarget.blur();
     restart();
   }
@@ -38,13 +38,13 @@ export default function Card() {
           <Timer timeLeft={timeLeft} />
 
           <Results
-            wpm={correctWords + wrongWords}
-            // correctTyped={380}
-            // wrongTyped={0}
+            wpm={correctWords}
+            correctTyped={correctChars}
+            wrongTyped={wrongChars}
             totalTyped={totalTyped}
             correctWords={correctWords}
             wrongWords={wrongWords}
-            accuracy={calulateAccuracyPercentage(wrongWords, totalTyped)}
+            accuracy={calulateAccuracyPercentage(wrongChars, totalTyped)}
             state={state}
           />
 

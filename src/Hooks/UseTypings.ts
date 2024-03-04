@@ -5,15 +5,14 @@ const isKeyboardCodeAllowed = (code: string) => {
     code.startsWith("Key") ||
     code.startsWith("Digit") ||
     code === "Backspace" ||
-    code === "Space"
+    code === "Space" ||
+    code === "Minus"
   );
 };
 
 const useTypings = (enabled: boolean) => {
   const [cursor, setCursor] = useState<number>(0);
   const [typed, setTyped] = useState<string>("");
-  // const [correctTyped, setCorrectTyped] = useRef(0);
-  // const [wrongTyped, setWrongTyped] = useRef(0);
   const totalTyped = useRef(0);
 
   const keydownHandler = useCallback(
